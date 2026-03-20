@@ -731,10 +731,6 @@ class CommandController(QMainWindow):
         if key is None:
             return
         work_dir = self._key_work_dir(key)
-        # 相同命令重新执行时开新面板；不同命令则复用当前已完成面板。
-        if command == self._key_command(key):
-            self._start_command(command, work_dir)
-            return
         self._start_command(command, work_dir, panel=panel)
 
     def _remap_panel_key(self, panel: ConsolePanel, new_key: CommandKey) -> bool:
