@@ -111,7 +111,7 @@ uvicorn app:app --reload
 中文：
 
 - 每次执行命令都会新开一个输出窗口
-- 相同命令重复执行，也会新开窗口
+- 从已有输出窗口发起的新命令会复用当前窗口，即使命令文本相同
 - 每页最多显示两个窗口
 - 同一页的两个窗口始终均分宽度
 - 命令执行结束后，`停止` 按钮会变灰
@@ -120,7 +120,7 @@ uvicorn app:app --reload
 English:
 
 - Every execution opens a new output panel
-- Running the same command again also opens a new panel
+- Commands launched from an existing output panel reuse that panel, even when the command text stays the same
 - Each page shows up to two panels
 - Two panels on the same page always split the width evenly
 - After a command finishes, the `Stop` button becomes disabled
